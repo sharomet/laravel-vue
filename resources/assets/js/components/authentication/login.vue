@@ -17,17 +17,36 @@
     data() {
       return {
         email: null,
-        password: null
+        password: null,
       }
+    },
+    mounted() {
+
     },
     methods: {
       login() {
-        const data = {
-          email: this.email,
-          password: this.password
+        let arr = [];
+        if(this.email == '') {
+          arr.push('Email is required');
         }
-        axios.post('/api/login', { body: data })
-            .then(res => console.log(res.data));
+        if(this.password == '') {
+          arr.push('Password is required');
+        }
+        if(arr.length > 0) {
+          for(let message of arr) {
+            console.log(message);
+            this.$toaster.error(message);
+          }
+        } else {
+          const data = {
+            email: this.email,
+            password: this.password
+          }
+          axios.post('/api/login', { body: data })
+              .then(res => console.log(res.data));
+        }
+
+
       }
     }
   }

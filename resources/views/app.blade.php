@@ -10,6 +10,7 @@
   <title>{{ config('app.name', 'Laravel') }}</title>
 
   <link href="{{ asset('css/font-awesome-5.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/v-toaster.css') }}" rel="stylesheet">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 </head>
