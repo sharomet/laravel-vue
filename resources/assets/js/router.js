@@ -3,6 +3,8 @@ import VueRouter from 'vue-router';
 
 import Home from './components/HomeComponent';
 import Post from './components/PostComponent';
+import Categories from './components/categories/Categories';
+import Products from './components/products/ProductList';
 import Login from './components/authentication/login';
 import Registration from './components/authentication/registration';
 
@@ -20,6 +22,16 @@ const router = new VueRouter({
             path: '/posts',
             name: 'post',
             component: Post,
+        },
+        {
+            path: '/categories',
+            name: 'categories',
+            component: Categories,
+        },
+        {
+            path: '/products/:id',
+            name: 'products',
+            component: Products,
         },
         {
             path: '/login',

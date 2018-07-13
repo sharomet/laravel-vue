@@ -7,7 +7,7 @@
       <textarea name="name" v-model="fullText" rows="6" class="form-control" placeholder="text"></textarea>
     </div>
     <div class="form-group mb-0">
-      <button class="btn btn-primary" v-on:click="test">Send</button>
+      <button class="btn btn-primary">Send</button>
     </div>
   </div>
 </template>

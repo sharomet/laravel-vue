@@ -20,3 +20,6 @@ Route::get('/login', function(){
 Route::post('/login', function(Request $request){
   return $request->all();
 });
+
+Route::get('/categories', 'CategoriesController@index');
+Route::get('/products/{_id}', 'ProductsController@index');

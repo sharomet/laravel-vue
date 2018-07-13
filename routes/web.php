@@ -1,10 +1,10 @@
 <?php
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('app');
 });
 
 Route::get('{all}', function () {
     return view('app');
-});
+});*/
 
-//Route::get('/{any}', 'AppController@index')->where('any', '.*');
+Route::get('/{any}', 'AppController@index')->where('any', '.*');

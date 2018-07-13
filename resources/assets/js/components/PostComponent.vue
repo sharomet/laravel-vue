@@ -1,26 +1,35 @@
 <template>
+  <div>
   <div class="row">
+    <div class="col-lg-3">
 
-    <div class="col-12">
-    <div class="form-group">
-      <input type="text" v-model="title" class="form-control">
-    </div>
-    <div class="form-group">
-      <textarea rows="6" v-model="text" class="form-control"></textarea>
-    </div>
-    <div class="form-group">
-      <button class="btn btn-primary" @click="createPost">Create</button>
-    </div>
-    </div>
+      
 
-    <div class="col-md-4" v-for="post in postdata">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">{{ post.title }}</h5>
-          <p>{{ post.text }}</p>
-        </div>
+    </div>
+    <div class="col-lg-9">
+      <div class="form-group">
+        <input type="text" v-model="title" class="form-control">
+      </div>
+      <div class="form-group">
+        <textarea rows="6" v-model="text" class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" @click="createPost">Create</button>
       </div>
     </div>
+
+
+  </div>
+  <div class="row">
+    <div class="col-md-4" v-for="post in postdata">
+    <div class="card">
+    <div class="card-body">
+    <h5 class="card-title">{{ post.title }}</h5>
+    <p>{{ post.text }}</p>
+    </div>
+    </div>
+    </div>
+  </div>
   </div>
 </template>
 
