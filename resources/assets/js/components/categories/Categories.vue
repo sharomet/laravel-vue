@@ -1,10 +1,12 @@
 <template>
-  <div class="row">
-    <div class="col-lg-3">
-      <categories-list></categories-list>
-    </div>
-    <div class="col-lg-9">
-      <categories-grid></categories-grid>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <categories-list></categories-list>
+      </div>
+      <div class="col-lg-9">
+        <categories-grid></categories-grid>
+      </div>
     </div>
   </div>
 </template>
@@ -13,11 +15,9 @@
   export default {
     data: function() {
       return {
-
       }
     },
     methods: {
-
-    }
+    },
   }
 </script>

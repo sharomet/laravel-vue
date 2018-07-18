@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="form-group">
       <input type="text" v-model="title" class="form-control" placeholder="Title">
     </div>

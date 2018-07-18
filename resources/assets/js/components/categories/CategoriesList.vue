@@ -1,6 +1,6 @@
 <template>
   <ul class="list-group">
-    <li class="list-group-item-action list-group-item" v-for="category of categories">
+    <li class="list-group-item-action list-group-item" v-for="(category, index) of categories" :key="index">
       <router-link :to="{ name: 'products', params: { id: category._id }}">{{ category.name }}</router-link>
     </li>
   </ul>
@@ -15,13 +15,6 @@
     },
     mounted() {
       this.getAllCategories();
-    },
-    methods: {
-      getAllCategories() {
-        axios.get('/api/categories').then((res) => {
-          this.categories = res.data;
-        });
-      }
     }
   }
 </script>

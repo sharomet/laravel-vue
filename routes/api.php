@@ -22,4 +22,7 @@ Route::post('/login', function(Request $request){
 });
 
 Route::get('/categories', 'CategoriesController@index');
+Route::get('/category/{_id}', 'CategoriesController@getCategory');
+
 Route::get('/products/{_id}', 'ProductsController@index');
+Route::get('/product/{_id}', 'ProductsController@getProduct');
