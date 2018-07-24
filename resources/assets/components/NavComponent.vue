@@ -20,7 +20,7 @@
                   <router-link :to="{ name: 'login' }" class="nav-link">Login</router-link>
               </li>
               <li class="nav-item">
-                  <router-link :to="{ name: 'registration' }" class="nav-link">Registration</router-link>
+                  <router-link :to="{ name: 'signup' }" class="nav-link">SignUp</router-link>
               </li>
           </ul>
       </div>

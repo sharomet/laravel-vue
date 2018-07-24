@@ -10005,6 +10005,10 @@ a:focus {
   text-decoration: none;
 }
 
+textarea {
+  resize: none;
+}
+
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -10071,5 +10075,9 @@ a:focus {
 .preloader-bg.hidePreloader {
   opacity: 0;
   visibility: hidden;
+}
+
+.table thead th {
+  border-width: 1px;
 }
 

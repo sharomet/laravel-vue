@@ -9,20 +9,24 @@ Route::get('/posts', 'PostController@index');
 
 Route::post('/create', 'PostController@create');
 
-Route::get('/login', function(){
-  return response()->json([
-    'user' => [
-      'name' => 'Alex'
-    ]
-  ]);
-});
-
-Route::post('/login', function(Request $request){
-  return $request->all();
-});
-
 Route::get('/categories', 'CategoriesController@index');
-Route::get('/category/{_id}', 'CategoriesController@getCategory');
+Route::get('/category/{id}', 'CategoriesController@getCategory');
 
-Route::get('/products/{_id}', 'ProductsController@index');
-Route::get('/product/{_id}', 'ProductsController@getProduct');
+Route::post('/category', [
+    'uses' => 'CategoriesController@addCategory',
+    'middleware' => 'auth.jwt'
+]);
+Route::delete('/category/{id}', [
+    'uses' => 'CategoriesController@deleteCategory',
+    'middleware' => 'auth.jwt'
+]);
+
+Route::get('/products/{id}', 'ProductsController@index');
+Route::get('/product/{id}', 'ProductsController@getProduct');
+
+Route::post('/signin', [
+    'uses' => 'AuthController@signin'
+]);
+Route::post('/signup', [
+    'uses' => 'AuthController@signup'
+]);

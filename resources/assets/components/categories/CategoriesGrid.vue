@@ -1,8 +1,8 @@
 <template>
   <div class="row">
-    <div class="col-md-4 col-sm-6 mb-3" v-for="(category, index) of categories" :key="index">
+    <div class="col-md-4 col-sm-6 mb-4" v-for="(category, index) of categories" :key="index">
       <div class="card h-100">
-        <router-link :to="{ name: 'products', params: { id: category._id } }">
+        <router-link :to="{ name: 'products', params: { id: category._id } }" v-if="category.image">
           <img class="card-img-top" :src="'/img/'+category.image" :alt="category.name">
         </router-link>
         <div class="card-body p-2">

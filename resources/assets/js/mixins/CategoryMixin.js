@@ -15,4 +15,6 @@ var categoryMixin = {
     }
 }
 
+Vue.mixin(categoryMixin);
+
 export default categoryMixin;
