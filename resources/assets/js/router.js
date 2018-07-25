@@ -21,7 +21,7 @@ const router = new VueRouter({
         {path: '/categories', name: 'categories', component: Categories},
         {path: '/products/:id', name: 'products', component: Products},      
         {path: '/product/:id', name: 'product', component: ProductDetail},
-        {path: '/login', name: 'login', component: Login, meta: { requiresAuth: false }},
+        {path: '/login', name: 'login', component: Login },
         {path: '/signup', name: 'signup', component: Signup},
         {path: '/admin/categories', name: 'adminCategories', component: AdminCategories, meta: { requiresAuth: true }},
     ],
